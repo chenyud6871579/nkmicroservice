@@ -1,0 +1,51 @@
+#说明java包名
+message java com.test.thrift.message
+#
+message py message.api
+#定义服务，给出部门名称
+service MessageService
+{   #短信
+    bool sendMobileMessage(1::string mobile ,2::string message);
+    #邮件邮箱
+    bool sendEmailMessage (1::string email.2::string message);
+
+   }
+#笔记
+from thrift.transport import TSsocker
+from thrift.transport
+ if__name__=='__main__':
+#1.创建thrift server 的server socket
+TSocket.TServerSocket(host_=_'127.0.0.1',port_=_'9090')
+#2.创建thrift server没写完
+transportFactory=TTransport
+#3.创建thrift server的protocol =二
+protocolFactory=
+#4.创建thrift server 提供的处理方法
+handler =Message
+#5.创建thrift server,指明如何处理，从哪里来、传输方式、传输协议
+thriftServer=TServer.TSimpleServer()
+#启动thrift server，等呆客户端的访问
+print ("Python Thrift Server start...")
+thrift server()
+
+#
+namespace java come.test.thrift.user
+#
+struct
+{
+1:i32 id,
+2:string username,
+3:string password,
+4:string realName,
+5:string mobile,
+6:string email,
+}
+service UserService
+{
+  #注册用户
+  void registerUser(1:UserInfo UserInfo);
+  #根据用户名获取信息
+  UserInfo getUserByName(1:string username);
+  #id
+  UserInfo getUser()
+}
